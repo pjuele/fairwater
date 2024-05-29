@@ -16,7 +16,7 @@ const apiData = z.object({
 export type ApiData = z.infer<typeof apiData>;
 
 async function getData(countryIsoCode: string) {
-  const url = `http://127.0.0.1:8000/data/${countryIsoCode}`;
+  const url = `/api/data/${countryIsoCode}`;
   console.log("Calling API: ", url);
   const res = await fetch(url);
   if (!res.ok) {
