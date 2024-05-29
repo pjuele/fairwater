@@ -1,7 +1,7 @@
 import { Block2, Block4 } from "@/components/xtable";
 
 async function getGdpData() {
-    const data = await fetch('http://localhost:8000/gdp');
+    const data = await fetch('/api/gdp');
     const json = await data.json();
     // console.log(json)
     const result = json
